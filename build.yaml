@@ -1,5 +1,5 @@
 # In your build.yaml
 include:
   - board: nice_nano_v2
-    shield: your_keyboard_shield
+    shield: myboard
     snippet: studio-rpc-usb-uart  # <--- ADD THIS LINE
