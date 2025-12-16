@@ -8,18 +8,17 @@
         label = "KSCAN";
         diode-direction = "col2row";
 
-        /* FIX: We swapped these. 
-           The list of 4 pins are now ROWS.
-           The list of 12 pins are now COLS.
+        /* ROWS: 4 pins
+           Row 3 updated to &gpio1 1 (Pin 101)
         */
-        
         row-gpios
             = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+            , <&gpio1 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
+        /* COLS: 12 pins (Unchanged) */
         col-gpios
             = <&gpio0 6  GPIO_ACTIVE_HIGH>
             , <&gpio0 8  GPIO_ACTIVE_HIGH>
