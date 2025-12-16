@@ -1,13 +1,11 @@
 /* myboard.overlay */
 #include <dt-bindings/zmk/matrix_transform.h>
-/* Import the standard 4x12 physical layout and matrix transform */
 #include <layouts/common/ortho_4x12/all.dtsi>
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        /* Use the standard 4x12 layout we imported above */
-        zmk,physical-layout = &physical_layout0; 
+        zmk,physical-layout = &physical_layout0;
     };
 
     kscan0: kscan_0 {
