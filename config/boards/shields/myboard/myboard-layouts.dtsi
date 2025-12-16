@@ -1,0 +1,73 @@
+/* myboard-layouts.dtsi */
+
+&physical_layout0 {
+    transform = <&default_transform>;
+};
+
+/ {
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        kscan = <&kscan0>;
+        
+        /* * 1u key size = 1900 units (19mm) 
+         * This defines a standard 4x12 grid
+         */
+        keys  // Row 1
+            = <&key_physical_attrs 0 0 1900 1900>
+            , <&key_physical_attrs 1900 0 1900 1900>
+            , <&key_physical_attrs 3800 0 1900 1900>
+            , <&key_physical_attrs 5700 0 1900 1900>
+            , <&key_physical_attrs 7600 0 1900 1900>
+            , <&key_physical_attrs 9500 0 1900 1900>
+            , <&key_physical_attrs 11400 0 1900 1900>
+            , <&key_physical_attrs 13300 0 1900 1900>
+            , <&key_physical_attrs 15200 0 1900 1900>
+            , <&key_physical_attrs 17100 0 1900 1900>
+            , <&key_physical_attrs 19000 0 1900 1900>
+            , <&key_physical_attrs 20900 0 1900 1900>
+
+            // Row 2
+            , <&key_physical_attrs 0 1900 1900 1900>
+            , <&key_physical_attrs 1900 1900 1900 1900>
+            , <&key_physical_attrs 3800 1900 1900 1900>
+            , <&key_physical_attrs 5700 1900 1900 1900>
+            , <&key_physical_attrs 7600 1900 1900 1900>
+            , <&key_physical_attrs 9500 1900 1900 1900>
+            , <&key_physical_attrs 11400 1900 1900 1900>
+            , <&key_physical_attrs 13300 1900 1900 1900>
+            , <&key_physical_attrs 15200 1900 1900 1900>
+            , <&key_physical_attrs 17100 1900 1900 1900>
+            , <&key_physical_attrs 19000 1900 1900 1900>
+            , <&key_physical_attrs 20900 1900 1900 1900>
+
+            // Row 3
+            , <&key_physical_attrs 0 3800 1900 1900>
+            , <&key_physical_attrs 1900 3800 1900 1900>
+            , <&key_physical_attrs 3800 3800 1900 1900>
+            , <&key_physical_attrs 5700 3800 1900 1900>
+            , <&key_physical_attrs 7600 3800 1900 1900>
+            , <&key_physical_attrs 9500 3800 1900 1900>
+            , <&key_physical_attrs 11400 3800 1900 1900>
+            , <&key_physical_attrs 13300 3800 1900 1900>
+            , <&key_physical_attrs 15200 3800 1900 1900>
+            , <&key_physical_attrs 17100 3800 1900 1900>
+            , <&key_physical_attrs 19000 3800 1900 1900>
+            , <&key_physical_attrs 20900 3800 1900 1900>
+
+            // Row 4
+            , <&key_physical_attrs 0 5700 1900 1900>
+            , <&key_physical_attrs 1900 5700 1900 1900>
+            , <&key_physical_attrs 3800 5700 1900 1900>
+            , <&key_physical_attrs 5700 5700 1900 1900>
+            , <&key_physical_attrs 7600 5700 1900 1900>
+            , <&key_physical_attrs 9500 5700 1900 1900>
+            , <&key_physical_attrs 11400 5700 1900 1900>
+            , <&key_physical_attrs 13300 5700 1900 1900>
+            , <&key_physical_attrs 15200 5700 1900 1900>
+            , <&key_physical_attrs 17100 5700 1900 1900>
+            , <&key_physical_attrs 19000 5700 1900 1900>
+            , <&key_physical_attrs 20900 5700 1900 1900>
+            ;
+    };
+};
