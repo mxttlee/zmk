@@ -1,18 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-/* Include the physical layout we just created */
-#include "myboard-layouts.dtsi"
-
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
     };
 
-    /* * Matrix Transform:
-     * Maps the 4 Rows and 12 Columns from KSCAN 
-     * to the linear key positions in the keymap/physical layout.
-     */
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
@@ -53,3 +46,6 @@
             ;
     };
 };
+
+/* Include the physical layout we just created */
+#include "myboard-layouts.dtsi"
