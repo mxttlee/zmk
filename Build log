@@ -1,0 +1,346 @@
+
+Run west build -s zmk/app -d "/tmp/tmp.leCWOH3EW1" -b "nice_nano" -S "studio-rpc-usb-uart" -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD="myboard" -DZMK_EXTRA_MODULES='/__w/zmk/zmk' 
++ west build -s zmk/app -d /tmp/tmp.leCWOH3EW1 -b nice_nano -S studio-rpc-usb-uart -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD=myboard -DZMK_EXTRA_MODULES=/__w/zmk/zmk
+-- west build: generating a build system
+Loading Zephyr default modules (Zephyr base).
+-- Application: /tmp/zmk-config/zmk/app
+-- CMake version: 3.31.6
+-- Found Python3: /usr/bin/python3 (found suitable version "3.12.3", minimum required is "3.10") found components: Interpreter
+-- Cache files will be written to: /tmp/zmk-config/zephyr/.cache
+-- Zephyr version: 4.1.0 (/tmp/zmk-config/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+CMake Deprecation Warning at keymap-module/modules/modules.cmake:53 (message):
+-- Adding ZMK config directory as board root: /tmp/zmk-config/config
+  The `config/boards` folder is deprecated.  Please use a module instead.
+  See https://zmk.dev/docs/development/hardware-integration/new-shield and
+  https://zmk.dev/docs/development/module-creation for more information.
+Call Stack (most recent call first):
+  /tmp/zmk-config/zephyr/cmake/modules/zephyr_module.cmake:126 (include)
+  /tmp/zmk-config/zephyr/cmake/modules/zephyr_default.cmake:134 (include)
+  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:9 (find_package)
+
+
+-- Board: nice_nano, Revision: 2.0.0, qualifiers: nrf52840
+-- Shield(s): myboard
+Checking /__w/zmk/zmk
+Checking /tmp/zmk-config/zmk/app
+found /tmp/zmk-config/zmk/app
+-- ZMK Config directory: /tmp/zmk-config/config
+nice_nano_nrf52840 for _nrf52840 for nice_nano with version 2.0.0
+Checking /tmp/zmk-config/config
+Checking /tmp/zmk-config/zephyr
+-- Using keymap file: /tmp/zmk-config/config/boards/shields/myboard/myboard.keymap
+-- Snippet(s): studio-rpc-usb-uart
+-- ZEPHYR_TOOLCHAIN_VARIANT not set, trying to locate Zephyr SDK
+-- Found host-tools: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)
+-- Found toolchain: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)
+-- Found Dtc: /opt/zephyr-sdk-0.16.9/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.6.0", minimum required is "1.4.6")
+-- Found BOARD.dts: /tmp/zmk-config/zmk/app/boards/nicekeyboards/nice_nano/nice_nano.dts
+[19/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/crc/crc7_sw.c.obj
+[20/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/crc/crc4_sw.c.obj
+[21/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/printk.c.obj
+[22/467] Running C++ protocol buffer compiler using nanopb plugin on /tmp/zmk-config/modules/msgs/zmk-studio-messages/proto/zmk/meta.proto
+[23/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/cbprintf_packaged.c.obj
+[24/467] Running C++ protocol buffer compiler using nanopb plugin on /tmp/zmk-config/modules/msgs/zmk-studio-messages/proto/zmk/core.proto
+[25/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/heap/heap.c.obj
+[26/467] Running C++ protocol buffer compiler using nanopb plugin on /tmp/zmk-config/modules/msgs/zmk-studio-messages/proto/zmk/behaviors.proto
+[27/467] Running C++ protocol buffer compiler using nanopb plugin on /tmp/zmk-config/modules/msgs/zmk-studio-messages/proto/zmk/studio.proto
+[28/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/thread_entry.c.obj
+[29/467] Running C++ protocol buffer compiler using nanopb plugin on /tmp/zmk-config/modules/msgs/zmk-studio-messages/proto/zmk/keymap.proto
+[30/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/sem.c.obj
+[31/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/assert.c.obj
+[32/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/reboot.c.obj
+[33/467] Building C object CMakeFiles/app.dir/src/stdlib.c.obj
+[34/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/poweroff.c.obj
+[35/467] Building C object CMakeFiles/app.dir/src/boot/bootmode_to_magic_mapper.c.obj
+[36/467] Building C object CMakeFiles/app.dir/src/activity.c.obj
+[37/467] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/cbprintf_complete.c.obj
+[38/467] Building C object CMakeFiles/app.dir/src/matrix_transform.c.obj
+[39/467] Building C object CMakeFiles/app.dir/src/physical_layouts.c.obj
+FAILED: CMakeFiles/app.dir/src/physical_layouts.c.obj 
+ccache /opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -DKERNEL -DK_HEAP_MEM_POOL_SIZE=0 -DMBEDTLS_CONFIG_FILE=\"config-tls-generic.h\" -DNRF52840_XXAA -DPB_MAX_REQUIRED_FIELDS=64 -DPB_NO_ERRMSG -DPB_WITHOUT_64BIT -DPICOLIBC_DOUBLE_PRINTF_SCANF -D__LINUX_ERRNO_EXTENSIONS__ -D__PROGRAM_START -D__ZEPHYR__=1 -I/tmp/zmk-config/zmk/app/include -I/tmp/tmp.leCWOH3EW1 -I/tmp/tmp.leCWOH3EW1/zephyr/include/generated/zephyr -I/tmp/zmk-config/zephyr/include -I/tmp/tmp.leCWOH3EW1/zephyr/include/generated -I/tmp/zmk-config/zephyr/soc/nordic -I/tmp/zmk-config/zephyr/soc/nordic/nrf52/. -I/tmp/zmk-config/zephyr/soc/nordic/common/. -I/tmp/zmk-config/zephyr/subsys/usb/device -I/tmp/zmk-config/zephyr/subsys/bluetooth/controller/ll_sw/nordic/hal/nrf5/nrfx_glue -I/tmp/zmk-config/zephyr/subsys/bluetooth -I/tmp/zmk-config/zephyr/subsys/settings/include -I/tmp/zmk-config/zephyr/drivers/usb/common/nrf_usbd_common/. -I/tmp/zmk-config/modules/lib/nanopb -I/tmp/zmk-config/modules/hal/cmsis/CMSIS/Core/Include -I/tmp/zmk-config/zephyr/modules/cmsis/. -I/tmp/zmk-config/modules/hal/nordic/nrfx -I/tmp/zmk-config/modules/hal/nordic/nrfx/drivers/include -I/tmp/zmk-config/modules/hal/nordic/nrfx/mdk -I/tmp/zmk-config/zephyr/modules/hal_nordic/nrfx/. -I/tmp/zmk-config/zmk/app/module/include -I/tmp/zmk-config/zmk/app/module/drivers/sensor/battery/. -I/tmp/zmk-config/modules/crypto/mbedtls/include -I/tmp/zmk-config/zephyr/modules/mbedtls/configs -I/tmp/zmk-config/zephyr/modules/mbedtls/include -isystem /tmp/zmk-config/zephyr/lib/libc/common/include -fno-strict-aliasing -Os -imacros /tmp/tmp.leCWOH3EW1/zephyr/include/generated/zephyr/autoconf.h -fno-common -g -gdwarf-4 -fdiagnostics-color=always -mcpu=cortex-m4 -mthumb -mabi=aapcs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mfp16-format=ieee -mtp=soft --sysroot=/opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/arm-zephyr-eabi -imacros /tmp/zmk-config/zephyr/include/zephyr/toolchain/zephyr_stdint.h -Wall -Wformat -Wformat-security -Wno-format-zero-length -Wdouble-promotion -Wno-pointer-sign -Wpointer-arith -Wexpansion-to-defined -Wno-unused-but-set-variable -Werror=implicit-int -fno-pic -fno-pie -fno-asynchronous-unwind-tables -ftls-model=local-exec -fno-reorder-functions --param=min-pagesize=0 -fno-defer-pop -fmacro-prefix-map=/tmp/zmk-config/zmk/app=CMAKE_SOURCE_DIR -fmacro-prefix-map=/tmp/zmk-config/zephyr=ZEPHYR_BASE -fmacro-prefix-map=/tmp/zmk-config=WEST_TOPDIR -ffunction-sections -fdata-sections -specs=picolibc.specs -std=c11 -Wfatal-errors -MD -MT CMakeFiles/app.dir/src/physical_layouts.c.obj -MF CMakeFiles/app.dir/src/physical_layouts.c.obj.d -o CMakeFiles/app.dir/src/physical_layouts.c.obj -c /tmp/zmk-config/zmk/app/src/physical_layouts.c
+In file included from /tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:34,
+                 from /tmp/zmk-config/zephyr/include/zephyr/irq_multilevel.h:16,
+                 from /tmp/zmk-config/zephyr/include/zephyr/devicetree.h:20,
+                 from /tmp/zmk-config/zmk/app/src/physical_layouts.c:7:
+/tmp/tmp.leCWOH3EW1/zephyr/include/generated/zephyr/devicetree_generated.h:3059:41: error: 'DT_N_S_physical_layout_0_P_keys_IDX_1_VAL_width' undeclared here (not in a function); did you mean 'DT_N_S_physical_layout_0_P_keys_IDX_12_VAL_width'?
+ 3059 | #define DT_N_INST_0_zmk_physical_layout DT_N_S_physical_layout_0
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4986:9: note: in expansion of macro 'COND_CODE_1'
+ 4986 |         COND_CODE_1(DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT),   \
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:1565:9: note: in expansion of macro 'DT_CAT7'
+ 1565 |         DT_CAT7(node_id, _P_, pha, _IDX_, idx, _VAL_, cell)
+      |         ^~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4347:9: note: in expansion of macro 'DT_PHA_BY_IDX'
+ 4347 |         DT_PHA_BY_IDX(DT_DRV_INST(inst), pha, idx, cell)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'DT_N_INST_0_zmk_physical_layout'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:104:26: note: in expansion of macro 'UTIL_PRIMITIVE_CAT'
+  104 | #define UTIL_CAT(a, ...) UTIL_PRIMITIVE_CAT(a, __VA_ARGS__)
+      |                          ^~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:349:31: note: in expansion of macro 'UTIL_CAT'
+  349 | #define DT_INST(inst, compat) UTIL_CAT(DT_N_INST, DT_DASH(inst, compat))
+      |                               ^~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:3909:27: note: in expansion of macro 'DT_INST'
+ 3909 | #define DT_DRV_INST(inst) DT_INST(inst, DT_DRV_COMPAT)
+      |                           ^~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4347:23: note: in expansion of macro 'DT_DRV_INST'
+ 4347 |         DT_PHA_BY_IDX(DT_DRV_INST(inst), pha, idx, cell)
+      |                       ^~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/physical_layouts.c:56:36: note: in expansion of macro 'DT_INST_PHA_BY_IDX'
+   56 |         .width = (int16_t)(int32_t)DT_INST_PHA_BY_IDX(n, keys, i, width),                          \
+      |                                    ^~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro 'ZKPA_INIT'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:25:9: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+   25 |         Z_UTIL_LISTIFY_2(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:29:9: note: in expansion of macro 'Z_UTIL_LISTIFY_3'
+   29 |         Z_UTIL_LISTIFY_3(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:33:9: note: in expansion of macro 'Z_UTIL_LISTIFY_4'
+   33 |         Z_UTIL_LISTIFY_4(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:37:9: note: in expansion of macro 'Z_UTIL_LISTIFY_5'
+   37 |         Z_UTIL_LISTIFY_5(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:41:9: note: in expansion of macro 'Z_UTIL_LISTIFY_6'
+   41 |         Z_UTIL_LISTIFY_6(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:45:9: note: in expansion of macro 'Z_UTIL_LISTIFY_7'
+   45 |         Z_UTIL_LISTIFY_7(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:49:9: note: in expansion of macro 'Z_UTIL_LISTIFY_8'
+   49 |         Z_UTIL_LISTIFY_8(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:53:9: note: in expansion of macro 'Z_UTIL_LISTIFY_9'
+   53 |         Z_UTIL_LISTIFY_9(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:57:9: note: in expansion of macro 'Z_UTIL_LISTIFY_10'
+   57 |         Z_UTIL_LISTIFY_10(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:61:9: note: in expansion of macro 'Z_UTIL_LISTIFY_11'
+   61 |         Z_UTIL_LISTIFY_11(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:65:9: note: in expansion of macro 'Z_UTIL_LISTIFY_12'
+   65 |         Z_UTIL_LISTIFY_12(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:69:9: note: in expansion of macro 'Z_UTIL_LISTIFY_13'
+   69 |         Z_UTIL_LISTIFY_13(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:73:9: note: in expansion of macro 'Z_UTIL_LISTIFY_14'
+   73 |         Z_UTIL_LISTIFY_14(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:77:9: note: in expansion of macro 'Z_UTIL_LISTIFY_15'
+   77 |         Z_UTIL_LISTIFY_15(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:81:9: note: in expansion of macro 'Z_UTIL_LISTIFY_16'
+   81 |         Z_UTIL_LISTIFY_16(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:85:9: note: in expansion of macro 'Z_UTIL_LISTIFY_17'
+   85 |         Z_UTIL_LISTIFY_17(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:89:9: note: in expansion of macro 'Z_UTIL_LISTIFY_18'
+   89 |         Z_UTIL_LISTIFY_18(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:93:9: note: in expansion of macro 'Z_UTIL_LISTIFY_19'
+   93 |         Z_UTIL_LISTIFY_19(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:97:9: note: in expansion of macro 'Z_UTIL_LISTIFY_20'
+   97 |         Z_UTIL_LISTIFY_20(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:101:9: note: in expansion of macro 'Z_UTIL_LISTIFY_21'
+  101 |         Z_UTIL_LISTIFY_21(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:105:9: note: in expansion of macro 'Z_UTIL_LISTIFY_22'
+  105 |         Z_UTIL_LISTIFY_22(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:109:9: note: in expansion of macro 'Z_UTIL_LISTIFY_23'
+  109 |         Z_UTIL_LISTIFY_23(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:113:9: note: in expansion of macro 'Z_UTIL_LISTIFY_24'
+  113 |         Z_UTIL_LISTIFY_24(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:117:9: note: in expansion of macro 'Z_UTIL_LISTIFY_25'
+  117 |         Z_UTIL_LISTIFY_25(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:121:9: note: in expansion of macro 'Z_UTIL_LISTIFY_26'
+  121 |         Z_UTIL_LISTIFY_26(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:125:9: note: in expansion of macro 'Z_UTIL_LISTIFY_27'
+  125 |         Z_UTIL_LISTIFY_27(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:129:9: note: in expansion of macro 'Z_UTIL_LISTIFY_28'
+  129 |         Z_UTIL_LISTIFY_28(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:133:9: note: in expansion of macro 'Z_UTIL_LISTIFY_29'
+  133 |         Z_UTIL_LISTIFY_29(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:137:9: note: in expansion of macro 'Z_UTIL_LISTIFY_30'
+  137 |         Z_UTIL_LISTIFY_30(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:141:9: note: in expansion of macro 'Z_UTIL_LISTIFY_31'
+  141 |         Z_UTIL_LISTIFY_31(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:145:9: note: in expansion of macro 'Z_UTIL_LISTIFY_32'
+  145 |         Z_UTIL_LISTIFY_32(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:149:9: note: in expansion of macro 'Z_UTIL_LISTIFY_33'
+  149 |         Z_UTIL_LISTIFY_33(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:153:9: note: in expansion of macro 'Z_UTIL_LISTIFY_34'
+  153 |         Z_UTIL_LISTIFY_34(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:157:9: note: in expansion of macro 'Z_UTIL_LISTIFY_35'
+  157 |         Z_UTIL_LISTIFY_35(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:161:9: note: in expansion of macro 'Z_UTIL_LISTIFY_36'
+  161 |         Z_UTIL_LISTIFY_36(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:165:9: note: in expansion of macro 'Z_UTIL_LISTIFY_37'
+  165 |         Z_UTIL_LISTIFY_37(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:169:9: note: in expansion of macro 'Z_UTIL_LISTIFY_38'
+  169 |         Z_UTIL_LISTIFY_38(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:173:9: note: in expansion of macro 'Z_UTIL_LISTIFY_39'
+  173 |         Z_UTIL_LISTIFY_39(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:177:9: note: in expansion of macro 'Z_UTIL_LISTIFY_40'
+  177 |         Z_UTIL_LISTIFY_40(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:181:9: note: in expansion of macro 'Z_UTIL_LISTIFY_41'
+  181 |         Z_UTIL_LISTIFY_41(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:185:9: note: in expansion of macro 'Z_UTIL_LISTIFY_42'
+  185 |         Z_UTIL_LISTIFY_42(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:189:9: note: in expansion of macro 'Z_UTIL_LISTIFY_43'
+  189 |         Z_UTIL_LISTIFY_43(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:193:9: note: in expansion of macro 'Z_UTIL_LISTIFY_44'
+  193 |         Z_UTIL_LISTIFY_44(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:197:9: note: in expansion of macro 'Z_UTIL_LISTIFY_45'
+  197 |         Z_UTIL_LISTIFY_45(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:201:9: note: in expansion of macro 'Z_UTIL_LISTIFY_46'
+  201 |         Z_UTIL_LISTIFY_46(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:205:9: note: in expansion of macro 'Z_UTIL_LISTIFY_47'
+  205 |         Z_UTIL_LISTIFY_47(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:209:9: note: in expansion of macro 'Z_UTIL_LISTIFY_48'
+  209 |         Z_UTIL_LISTIFY_48(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:213:9: note: in expansion of macro 'Z_UTIL_LISTIFY_49'
+  213 |         Z_UTIL_LISTIFY_49(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:217:9: note: in expansion of macro 'Z_UTIL_LISTIFY_50'
+  217 |         Z_UTIL_LISTIFY_50(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:221:9: note: in expansion of macro 'Z_UTIL_LISTIFY_51'
+  221 |         Z_UTIL_LISTIFY_51(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:225:9: note: in expansion of macro 'Z_UTIL_LISTIFY_52'
+  225 |         Z_UTIL_LISTIFY_52(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:229:9: note: in expansion of macro 'Z_UTIL_LISTIFY_53'
+  229 |         Z_UTIL_LISTIFY_53(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:233:9: note: in expansion of macro 'Z_UTIL_LISTIFY_54'
+  233 |         Z_UTIL_LISTIFY_54(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:237:9: note: in expansion of macro 'Z_UTIL_LISTIFY_55'
+  237 |         Z_UTIL_LISTIFY_55(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:241:9: note: in expansion of macro 'Z_UTIL_LISTIFY_56'
+  241 |         Z_UTIL_LISTIFY_56(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:245:9: note: in expansion of macro 'Z_UTIL_LISTIFY_57'
+  245 |         Z_UTIL_LISTIFY_57(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:249:9: note: in expansion of macro 'Z_UTIL_LISTIFY_58'
+  249 |         Z_UTIL_LISTIFY_58(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:253:9: note: in expansion of macro 'Z_UTIL_LISTIFY_59'
+  253 |         Z_UTIL_LISTIFY_59(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:257:9: note: in expansion of macro 'Z_UTIL_LISTIFY_60'
+  257 |         Z_UTIL_LISTIFY_60(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:261:9: note: in expansion of macro 'Z_UTIL_LISTIFY_61'
+  261 |         Z_UTIL_LISTIFY_61(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:265:9: note: in expansion of macro 'Z_UTIL_LISTIFY_62'
+  265 |         Z_UTIL_LISTIFY_62(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:269:9: note: in expansion of macro 'Z_UTIL_LISTIFY_63'
+  269 |         Z_UTIL_LISTIFY_63(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:273:9: note: in expansion of macro 'Z_UTIL_LISTIFY_64'
+  273 |         Z_UTIL_LISTIFY_64(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:277:9: note: in expansion of macro 'Z_UTIL_LISTIFY_65'
+  277 |         Z_UTIL_LISTIFY_65(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:281:9: note: in expansion of macro 'Z_UTIL_LISTIFY_66'
+  281 |         Z_UTIL_LISTIFY_66(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:285:9: note: in expansion of macro 'Z_UTIL_LISTIFY_67'
+  285 |         Z_UTIL_LISTIFY_67(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:289:9: note: in expansion of macro 'Z_UTIL_LISTIFY_68'
+  289 |         Z_UTIL_LISTIFY_68(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:293:9: note: in expansion of macro 'Z_UTIL_LISTIFY_69'
+  293 |         Z_UTIL_LISTIFY_69(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:297:9: note: in expansion of macro 'Z_UTIL_LISTIFY_70'
+  297 |         Z_UTIL_LISTIFY_70(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:301:9: note: in expansion of macro 'Z_UTIL_LISTIFY_71'
+  301 |         Z_UTIL_LISTIFY_71(F, sep, __VA_ARGS__) __DEBRACKET sep \
+      |         ^~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_72'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/physical_layouts.c:77:9: note: in expansion of macro 'LISTIFY'
+   77 |         LISTIFY(DT_INST_PROP_LEN_OR(n, keys, 0), ZKPA_INIT, (, ), n)};                             \
+      |         ^~~~~~~
+/tmp/tmp.leCWOH3EW1/zephyr/include/generated/zephyr/devicetree_generated.h:20038:54: note: in expansion of macro 'ZMK_LAYOUT_INST'
+20038 | #define DT_FOREACH_OKAY_INST_zmk_physical_layout(fn) fn(0)
+      |                                                      ^~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'DT_FOREACH_OKAY_INST_zmk_physical_layout'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/physical_layouts.c:97:1: note: in expansion of macro 'DT_INST_FOREACH_STATUS_OKAY'
+   97 | DT_INST_FOREACH_STATUS_OKAY(ZMK_LAYOUT_INST)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated due to -Wfatal-errors.
+[40/467] Building C object CMakeFiles/app.dir/src/behavior.c.obj
+[41/467] Building C object CMakeFiles/app.dir/src/sensors.c.obj
+[42/467] Building C object CMakeFiles/app.dir/src/event_manager.c.obj
+[43/467] Building C object CMakeFiles/app.dir/src/pm.c.obj
+[44/467] Building C object CMakeFiles/app.dir/src/ext_power_generic.c.obj
+ninja: build stopped: subcommand failed.
+FATAL ERROR: command exited with status 1: /usr/local/bin/cmake --build /tmp/tmp.leCWOH3EW1
+Error: Process completed with exit code 1.
