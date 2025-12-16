@@ -9,19 +9,22 @@
         diode-direction = "col2row";
 
         /* ROWS: 4 pins
-           Row 3 updated to &gpio1 1 (Pin 101)
+           Row 2 updated to &gpio0 24 (was 22)
+           Row 3 is &gpio1 1 (101)
         */
         row-gpios
             = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
             , <&gpio1 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
-        /* COLS: 12 pins (Unchanged) */
+        /* COLS: 12 pins 
+           Swapped first two pins: 008 is now first, 006 is second.
+        */
         col-gpios
-            = <&gpio0 6  GPIO_ACTIVE_HIGH>
-            , <&gpio0 8  GPIO_ACTIVE_HIGH>
+            = <&gpio0 8  GPIO_ACTIVE_HIGH>
+            , <&gpio0 6  GPIO_ACTIVE_HIGH>
             , <&gpio0 17 GPIO_ACTIVE_HIGH>
             , <&gpio0 11 GPIO_ACTIVE_HIGH>
             , <&gpio1 4  GPIO_ACTIVE_HIGH>
